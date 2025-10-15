@@ -22,6 +22,8 @@ class CreateEmployeeUseCase
             gender: match($d->gender) {
                 'male' => Gender::male(),
                 'female' => Gender::female(),
+                'other' => Gender::other(),
+                default => Gender::fromString($d->gender),
             },
             birthDate: $d->birthDate ? Carbon::parse($d->birthDate) : null,
             nationalId: new NationalId($d->nationalId),

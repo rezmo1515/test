@@ -5,7 +5,7 @@ class Gender
 {
     private string $value;
 
-    private const VALID_GENDERS = ['male', 'female'];
+    private const VALID_GENDERS = ['male', 'female', 'other'];
 
     public function __construct(string $value)
     {
@@ -24,6 +24,11 @@ class Gender
     public static function female(): self
     {
         return new self('female');
+    }
+
+    public static function other(): self
+    {
+        return new self('other');
     }
 
     public static function fromString(string $value): self
