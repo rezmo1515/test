@@ -8,7 +8,7 @@ class EmployeeStoreRequest extends FormRequest
 {
     public function authorize(): bool
     {
-        return $this->user()->can('manage-staff');  // Check if the user has permission
+        return (bool) $this->user()?->can('manage-staff');  // Gracefully handle unauthenticated requests
     }
 
     public function rules(): array

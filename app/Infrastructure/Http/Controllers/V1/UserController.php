@@ -2,20 +2,20 @@
 namespace App\Infrastructure\Http\Controllers\V1;
 
 use App\Domain\V1\User\Entities\User;
+use App\Infrastructure\Http\Controllers\ApiController;
 use App\Infrastructure\Http\Requests\V1\User\UserRequest;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 
-class UserController extends Controller
+class UserController extends ApiController
 {
     public function login(UserRequest $request): JsonResponse
     {
         $credentials = $request->validated();
 
         if (!Auth::attempt($credentials)) {
-            return response()->json(['message' => 'Invalid credentials'], 422);
+            return $this->failure('Invalid credentials', 422);
         }
 
         /** @var User $user */
@@ -23,10 +23,9 @@ class UserController extends Controller
 
         $token = $user->createToken('api')->plainTextToken;
 
-        return response()->json([
-            'message' => 'Logged in',
-            'token'   => $token,
-        ]);
+        return $this->success([
+            'token' => $token,
+        ], 'Logged in');
     }
 
     public function logout(Request $request): JsonResponse
@@ -35,6 +34,6 @@ class UserController extends Controller
         $user = $request->user();
         $user->currentAccessToken()?->delete();
 
-        return response()->json(['message' => 'Logged out']);
+        return $this->success(message: 'Logged out');
     }
 }
