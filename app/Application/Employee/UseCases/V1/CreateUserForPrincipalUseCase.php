@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Application\User\UseCases\V1;
+namespace App\Application\Employee\UseCases\V1;
 
 use App\Domain\V1\User\Entities\User;
 use App\Domain\V1\User\ValueObjects\Email;

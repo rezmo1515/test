@@ -19,13 +19,19 @@ class UserController extends ApiController
         }
 
         /** @var User $user */
-        $user = $request->user();
+        $user = Auth::user();
 
         $token = $user->createToken('api')->plainTextToken;
-
         return $this->success([
             'token' => $token,
-        ], 'Logged in');
+            'user' => [
+                'id' => $user->id,
+                'username' => $user->getUserName(),
+                'email' => $user->getEmail(),
+                'active' => $user->isActive(),
+                'lastLogin' => $user->getLastLogin(),
+            ]
+        ], 'Logged in successfully');
     }
 
     public function logout(Request $request): JsonResponse
@@ -34,6 +40,6 @@ class UserController extends ApiController
         $user = $request->user();
         $user->currentAccessToken()?->delete();
 
-        return $this->success(message: 'Logged out');
+        return $this->success(message: 'Logged out successfully');
     }
 }
