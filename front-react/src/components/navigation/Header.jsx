@@ -3,8 +3,8 @@ import PrimaryButton from '../ui/PrimaryButton.jsx';
 
 const navItems = [
   { label: 'خانه', href: '/' },
-  { label: 'خدمات', href: '#services' },
-  { label: 'ویژگی‌ها', href: '#features' },
+  { label: 'ماژول‌ها', href: '#services' },
+  { label: 'قابلیت‌ها', href: '#features' },
   { label: 'ارتباط با ما', href: '#contact' }
 ];
 
@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <header className="top-header">
       <div className="container header-container">
-        <div className="brand">مبین هاست</div>
+        <div className="brand">مبین HR</div>
         <button
           className="menu-toggle"
           type="button"
@@ -35,7 +35,7 @@ const Header = () => {
         </nav>
         <div className="header-actions">
           <PrimaryButton as="a" href="#contact">
-            ورود کاربران
+            درخواست دمو
           </PrimaryButton>
         </div>
       </div>

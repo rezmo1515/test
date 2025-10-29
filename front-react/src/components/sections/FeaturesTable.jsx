@@ -4,16 +4,16 @@ const FeaturesTable = () => (
   <section className="features" id="features">
     <div className="container">
       <div className="section-header">
-        <h2>چرا مبین هاست انتخاب متخصصان است؟</h2>
+        <h2>ماژول‌های کلیدی سامانه منابع انسانی</h2>
         <p>
-          خلاصه‌ای از مزایای کلیدی سرویس‌ها بر اساس نیاز مشتریان سازمانی و استارتاپی، برگرفته از کاتالوگ رسمی
-          شرکت.
+          مجموعه‌ای کامل از قابلیت‌های ضروری برای مدیریت چرخه عمر کارکنان، از ثبت اطلاعات اولیه تا تحلیل‌های
+          راهبردی و انطباق حقوقی.
         </p>
       </div>
       <div className="feature-table" role="table">
         <div className="feature-table__head" role="row">
-          <div role="columnheader">نوع</div>
-          <div role="columnheader">ویژگی‌ها</div>
+          <div role="columnheader">دسته‌بندی</div>
+          <div role="columnheader">قابلیت‌ها</div>
         </div>
         {featureRows.map((row) => (
           <div key={row.type} className="feature-table__row" role="row">

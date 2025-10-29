@@ -2,15 +2,15 @@ const Footer = () => (
   <footer className="site-footer" id="contact">
     <div className="container footer-container">
       <div>
-        <h3>مبین هاست</h3>
-        <p>با بیش از ده سال تجربه در ارائه سرویس‌های میزبانی ابری، سرور و ثبت دامنه.</p>
+        <h3>مبین HR</h3>
+        <p>پلتفرم بومی مدیریت سرمایه انسانی برای سازمان‌های در حال رشد و شرکت‌های بزرگ.</p>
       </div>
       <div>
         <h4>راه‌های ارتباطی</h4>
         <ul>
           <li>تلفن: ۰۲۱-۱۲۳۴۵۶۷</li>
-          <li>پشتیبانی ۲۴ ساعته از طریق تیکت</li>
-          <li>ایمیل: support@mobinhost.example</li>
+          <li>پشتیبانی اختصاصی HR از طریق تیکت و چت سازمانی</li>
+          <li>ایمیل: support@mobinhr.example</li>
         </ul>
       </div>
       <div>
@@ -18,7 +18,7 @@ const Footer = () => (
         <p>تهران، خیابان مثال، پلاک ۴۲، واحد ۱۰</p>
       </div>
     </div>
-    <div className="footer-bottom">© {new Date().getFullYear()} مبین هاست. تمامی حقوق محفوظ است.</div>
+    <div className="footer-bottom">© {new Date().getFullYear()} مبین HR. تمامی حقوق محفوظ است.</div>
   </footer>
 );
 
