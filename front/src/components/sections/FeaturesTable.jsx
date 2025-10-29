@@ -7,8 +7,8 @@ const FeaturesTable = ({ rows = [], loading = false, error = '' }) => {
     <section className="features" id="features">
       <div className="container">
         <div className="section-header">
-          <h2>ویژگی‌های کلیدی سامانه مدیریت منابع انسانی</h2>
-          <p>نگاهی خلاصه به ماژول‌ها و امکانات اصلی که در نسخه سازمانی سامانه حضور دارند.</p>
+          <h2>ماژول‌های کلیدی کنترل و گزارش منابع انسانی</h2>
+          <p>در یک نگاه، امکاناتی که پرونده‌های پرسنلی، دسترسی‌ها و گزارش‌های مالی را پوشش می‌دهد.</p>
         </div>
         {error && <div className="alert alert-error">{error}</div>}
         <div className="feature-table" role="table" aria-busy={loading}>
