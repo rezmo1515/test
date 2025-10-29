@@ -4,6 +4,7 @@ import AuthGuard from './components/layout/AuthGuard.jsx';
 import LoginPage from './pages/LoginPage.jsx';
 import EmployeesPage from './pages/EmployeesPage.jsx';
 import NotFoundPage from './pages/NotFoundPage.jsx';
+import HomePage from './components/HomePage.jsx';
 import { AuthProvider, useAuth } from './context/AuthContext.jsx';
 
 const ProtectedRoute = ({ children }) => {
@@ -17,6 +18,7 @@ const ProtectedRoute = ({ children }) => {
 const AppRoutes = () => (
   <Routes>
     <Route path="/login" element={<AuthGuard guestOnly><LoginPage /></AuthGuard>} />
+    <Route path="/" element={<HomePage />} />
     <Route
       path="/employees"
       element={(
@@ -27,7 +29,6 @@ const AppRoutes = () => (
         </ProtectedRoute>
       )}
     />
-    <Route path="/" element={<Navigate to="/employees" replace />} />
     <Route
       path="*"
       element={(
