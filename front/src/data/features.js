@@ -1,4 +1,4 @@
-export const featureRows = [
+export const fallbackFeatureRows = [
   {
     type: 'گروه‌ها و بخش‌ها',
     details: [
