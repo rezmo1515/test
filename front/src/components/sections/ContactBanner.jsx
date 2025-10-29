@@ -4,14 +4,14 @@ const ContactBanner = () => (
   <section className="contact-banner">
     <div className="container contact-banner__content">
       <div>
-        <h2>نیاز به راهکار اختصاصی دارید؟</h2>
+        <h2>نیاز به استقرار اختصاصی دارید؟</h2>
         <p>
-          کارشناسان ما آماده‌اند تا با بررسی زیرساخت فعلی شما، بهترین پیشنهاد را برای مهاجرت به پلتفرم ابری مبین
-          هاست ارائه دهند.
+          تیم پیاده‌سازی مبین HR آماده است تا فرآیندهای منابع انسانی سازمان شما را تحلیل و در کمترین زمان روی
+          زیرساخت لاراول سفارشی‌سازی کند.
         </p>
       </div>
-      <PrimaryButton as="a" href="mailto:sales@mobinhost.example">
-        ثبت درخواست مشاوره
+      <PrimaryButton as="a" href="mailto:hr-solutions@mobin.example">
+        درخواست جلسه مشاوره
       </PrimaryButton>
     </div>
   </section>
