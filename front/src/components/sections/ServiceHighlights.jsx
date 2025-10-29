@@ -3,22 +3,25 @@ import PrimaryButton from '../ui/PrimaryButton.jsx';
 
 const fallbackServices = [
   {
-    id: 'cloud-hosting',
-    title: 'هاست ابری ایران',
-    description: 'هاست بر پایه زیرساخت ابری با سرعت بالا و منابع اختصاصی برای سایت‌های وردپرسی.',
-    link: '/services/cloud-hosting'
+    id: 'talent-suite',
+    title: 'مدیریت جذب و استقرار',
+    description:
+      'گردش‌کار استخدام، بررسی سوابق و تحویل تجهیزات به صورت خودکار با قابلیت تعریف فرم‌های اختصاصی.',
+    link: '/modules/talent-suite'
   },
   {
-    id: 'vps',
-    title: 'سرور مجازی ابری',
-    description: 'سرورهای ابری NVMe با امکان افزایش منابع به صورت آنی و پنل مدیریتی فارسی.',
-    link: '/services/vps'
+    id: 'performance',
+    title: 'ارزیابی عملکرد و رشد',
+    description:
+      'طراحی چرخه‌های ارزیابی، ثبت اهداف OKR و ارائه گزارش‌های تحلیلی برای مدیران و کارمندان.',
+    link: '/modules/performance'
   },
   {
-    id: 'dedicated',
-    title: 'سرور اختصاصی',
-    description: 'سرورهای اختصاصی در دیتاسنترهای معتبر اروپایی با پورت گیگابیتی و آپتایم ۹۹.۹٪.',
-    link: '/services/dedicated'
+    id: 'payroll',
+    title: 'حقوق و دستمزد پیشرفته',
+    description:
+      'محاسبه خودکار حقوق، مزایا و مالیات با اتصال به اطلاعات قرارداد و حضور و غیاب سازمان.',
+    link: '/modules/payroll'
   }
 ];
 
@@ -29,20 +32,20 @@ const ServiceHighlights = ({ services, loading, error }) => {
     <section className="services" id="services">
       <div className="container">
         <div className="section-header">
-          <h2>خدمات پیشنهادی مبین هاست</h2>
-          <p>تنوع کامل سرویس‌ها برای تمام نیازهای میزبانی، از استارتاپ تا سازمان‌های بزرگ.</p>
+          <h2>ماژول‌های پیشنهادی مبین HR</h2>
+          <p>با انتخاب هر ماژول می‌توانید دقیقاً مطابق ساختار سازمان خود سامانه را پیکربندی کنید.</p>
         </div>
         {error && <div className="alert alert-error">{error}</div>}
         <div className="service-grid">
           {renderedServices.map((service) => {
-            const link = service.link || (service.id ? `/services/${service.id}` : '#contact');
+            const link = service.link || (service.id ? `/modules/${service.id}` : '#contact');
             return (
               <article key={service.id || service.title} className="service-card">
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
                 <div className="service-card__cta">
                   <PrimaryButton as="a" href={link}>
-                    جزئیات بیشتر
+                    مشاهده جزئیات
                   </PrimaryButton>
                 </div>
               </article>
