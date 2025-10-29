@@ -20,10 +20,10 @@ const Sidebar = ({ active }) => {
     <aside className="sidebar">
       <div className="sidebar-header">
         <div className="sidebar-brand">
-          <span className="brand-logo" aria-hidden="true">M</span>
+          <span className="brand-logo" aria-hidden="true">م</span>
           <div>
-            <strong>Mobin Host</strong>
-            <span>سامانه منابع انسانی</span>
+            <strong>مبین هاست</strong>
+            <span>سامانه مدیریت منابع انسانی</span>
           </div>
         </div>
       </div>

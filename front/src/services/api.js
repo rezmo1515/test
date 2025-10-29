@@ -82,4 +82,24 @@ export const fetchDepartments = async (filters = {}) => {
   }
 };
 
+export const fetchFeatureMatrix = async () => {
+  try {
+    const response = await client.get('/feature-matrix');
+    const payload = resolvePayload(response);
+    if (Array.isArray(payload?.rows)) {
+      return payload.rows;
+    }
+    if (Array.isArray(payload)) {
+      return payload;
+    }
+    return [];
+  } catch (error) {
+    throw normalizeError(error);
+  }
+};
+
+export const fetchServices = async () => {
+  return [];
+};
+
 export default client;
